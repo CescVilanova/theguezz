@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The guezz is the name of a web based social game about sports predictions. 
 
-Things you may want to cover:
+The unique ingredient of The Guezz is that, contrary to betting sites, you win when you beat your friends at doing accurate predictions.
 
-* Ruby version
+This app is a simple prototype to test a new set of rules of the game.
 
-* System dependencies
+The app basically covers:
 
-* Configuration
+1. Player registration.
+2. PLayer scores management (only available for the admin) and consultation (public).
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
