@@ -9,5 +9,44 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require foundation_and_overrides
  *= require_tree .
  */
+
+.centered {
+  text-align:center;
+}
+
+.centered_vertically {
+  margin: 0 auto;
+  position: relative;
+  top: 45%; 
+}
+  
+.centered_padding_bottom_20 {
+  text-align:center;
+  padding-bottom: 20px;
+}
+
+.centered_padding_bottom_40 {
+  text-align:center;
+  padding-bottom: 40px;
+}
+
+.padding_bottom_40 {
+  padding-bottom: 40px;
+}
+
+.body_custom { 
+  margin-top: 40px; 
+  background-image:url('sos.png');
+}
+
+.claim { 
+  margin-down: 100px; 
+}
+
+.orbit-container {
+  background-color: white; 
+}
+

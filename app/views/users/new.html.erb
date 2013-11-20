@@ -26,34 +26,26 @@
   </div>
 </div>
 
-<!-- User Action Reinforcement
+<!-- Adding the form here -->
 
 <div class="row">
-  <div class="small-9 small-centered columns">
-    <div id="centered">
-      <h2 class="subheader">Choose your favorite team</h2>
-    </div>
+  <div class ="small-6 small-centered columns padding_bottom_40">
+    <form>
+      <label>Name</label>
+      <input type="text" placeholder="Write your name here...">
+      <label>Email</label>
+      <input type="text" placeholder="Write your Email address here...">
+    </form>
   </div>
 </div>
 
--->
+<!-- End of the form -->
 
-<div class="row">
-  <div class="small-6 large-centered columns centered_padding_bottom_40">
-    <ul data-orbit>
-    <%@clubs.each do |n|%>
-      <li>
-        <%= image_tag(n.crest)%>
-      </li>
-    <%end%>
-    </ul>
-  </div>
-</div>
-  
+
 <div class="centered_padding_bottom_40">
-  <div class="large button buton success button radius center">
-  <%= link_to "Start Playing With This Team", new_club_user_path(:club_id => 2) %>
-  </div>
+  <p class="large button buton success button radius center">
+    <%= link_to "Register In The Game", new_club_user_path(:club_id => 2) %>
+  </p>
 </div>
 
 <div class="centered_padding_bottom_40">
@@ -63,3 +55,11 @@
 <div class="centered_padding_bottom_40">
   <p>© The Guezz<p>
 </div>
+
+
+
+
+
+
+
+
