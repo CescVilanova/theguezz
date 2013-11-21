@@ -1,2 +1,67 @@
-<h4 class="subheader apptitle">Guezz - 2 Phase Champions League 2013-2014</h4>
+<h4 class="subheader">Guezz - Knockout Phase Champions League 2013-2014</h4>
 
+<p class="subheader">
+  <a href="#" data-reveal-id="GameRulesModal">Game Rules</a>
+  |
+  <a href="#">Admin Login</a>
+</p>
+
+<hr>
+
+<h4 class="subheader">Week 1 Ranking</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th width="200">Player</th>
+      <th width="400"></th>
+      <th width="50">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@users.each do |n|%>
+      <tr>
+        <td>
+          <%= n.name %>
+        </td>
+        <td></td>
+        <td>
+          <%= n.score %>
+        </td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+
+<!-- Need to be updated. Now just a copy of the above table. -->
+
+<h4 class="subheader">Overall Ranking</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th width="200">Player</th>
+      <th width="400"></th>
+      <th width="50">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@users.each do |n|%>
+      <tr>
+        <td>
+          <%= n.name %>
+        </td>
+        <td></td>
+        <td>
+          <%= n.score %>
+        </td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+
+<!-- End of the placeholder talbe. -->
+
+<div class="centered_padding_bottom_40">
+  <p>© The Guezz<p>
+</div>

@@ -16,16 +16,6 @@
 .centered {
   text-align:center;
 }
-
-.apptitle {
-  margin-left: 60px;
-}
-
-.centered_vertically {
-  margin: 0 auto;
-  position: relative;
-  top: 45%; 
-}
   
 .centered_padding_bottom_20 {
   text-align:center;
