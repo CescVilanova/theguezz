@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   end
   
   def create
-    User.create(user_params)
     @club = Club.find params[:club_id]
     @user = User.new params[user_params]
     @user.selected_club_id = @club
