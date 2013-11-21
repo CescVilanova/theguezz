@@ -17,6 +17,10 @@
   text-align:center;
 }
 
+.apptitle {
+  margin-left: 60px;
+}
+
 .centered_vertically {
   margin: 0 auto;
   position: relative;
@@ -39,7 +43,6 @@
 
 .body_custom { 
   margin-top: 40px; 
-  background-image:url('sos.png');
 }
 
 .claim { 

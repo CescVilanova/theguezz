@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131121130134) do
+ActiveRecord::Schema.define(version: 20131121170840) do
 
   create_table "clubs", force: true do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20131121130134) do
     t.string   "name"
     t.string   "email"
     t.integer  "selected_club_id"
+    t.integer  "score",            default: 0
   end
 
 end
