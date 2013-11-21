@@ -45,16 +45,17 @@
       <li>
         <%= image_tag(n.crest, class: "text-center")%>
       </li>
+        <div class="centered_padding_bottom_40">
+          <div class="large button buton success button radius center">
+            <%= link_to "Start Playing With This Team", new_club_user_path(:club_id => 2) %>
+         </div>
+       </div>
     <%end%>
     </ul>
   </div>
 </div>
   
-<div class="centered_padding_bottom_40">
-  <div class="large button buton success button radius center">
-  <%= link_to "Start Playing With This Team", new_club_user_path(:club_id => 2) %>
-  </div>
-</div>
+
 
 <!-- Footer -->
 
