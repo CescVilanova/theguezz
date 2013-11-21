@@ -30,23 +30,19 @@
 
 <div class="row">
   <div class ="small-6 small-centered columns padding_bottom_40">
-    <form>
-      <label>Name</label>
-      <input type="text" placeholder="Write your name here...">
-      <label>Email</label>
-      <input type="text" placeholder="Write your Email address here...">
-    </form>
+    <%= form_for([@club, @user]) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: "Write your name here" %>
+      <%= f.label :email %>
+      <%= f.email_field :email, placeholder: "Write your email here" %>
+      <%= f.submit %>
+    <% end %>
   </div>
 </div>
 
 <!-- End of the form -->
 
-
-<div class="centered_padding_bottom_40">
-  <p class="large button buton success button radius center">
-    <%= link_to "Register In The Game", new_club_user_path(:club_id => 2) %>
-  </p>
-</div>
+<!-- Footer -->
 
 <div class="centered_padding_bottom_40">
   <p>*To join the game, you must choose your team and register before <b>Tuesday the 15th of January 2014.</b><p>
@@ -55,11 +51,3 @@
 <div class="centered_padding_bottom_40">
   <p>© The Guezz<p>
 </div>
-
-
-
-
-
-
-
-

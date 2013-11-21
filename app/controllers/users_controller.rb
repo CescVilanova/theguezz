@@ -2,17 +2,26 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
-    @club_id = params[:club_id]
+    @club = Club.find params[:club_id]
   end
   
   def create
-    @user =User.new(params[:user])
-    if @user.save 
-         @match = Match.new(:user_id => @user.id, :club_id => params[:club_id])
-      redirect_to "welcome#index"
+    User.create(user_params)
+    @club = Club.find params[:club_id]
+    @user = User.new params[user_params]
+    @user.selected_club_id = @club
+    
+    if @user.save
+      redirect_to welcome_registered_path
     else
       render :new
     end
+  end
+  
+  private
+  
+  def user_params
+    params.require(:user).permit(:name, :email, :selected_club)
   end
   
 end

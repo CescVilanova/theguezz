@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131120164259) do
+ActiveRecord::Schema.define(version: 20131121130134) do
 
   create_table "clubs", force: true do |t|
     t.string   "name"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 20131120164259) do
   create_table "users", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "email"
+    t.integer  "selected_club_id"
   end
 
 end

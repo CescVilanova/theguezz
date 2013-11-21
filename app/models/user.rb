@@ -1,4 +1,3 @@
 class User < ActiveRecord::Base
-  has_many :matches
-  has_many :clubs, through: :matches
+  has_one :selected_club, class_name: "Club"
 end
