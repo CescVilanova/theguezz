@@ -1,5 +1,9 @@
 Theguezz::Application.routes.draw do
 
+  get "static_pages/about"
+  get "static_pages/rules"
+  get "static_pages/layout_predictions_public"
+  get "static_pages/layout_predictions_admin"
   get "users/index"
   get "welcome/registered"
   resources :clubs do

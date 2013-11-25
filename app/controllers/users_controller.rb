@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   
   def create
     @club = Club.find params[:club_id]
-    @user = User.new params[user_params]
+    @user = User.new user_params
     @user.selected_club_id = @club
     
     if @user.save
@@ -18,7 +18,8 @@ class UsersController < ApplicationController
   end
   
   def index
-    @users = User.all
+    @users = User.all.order(score: :desc)
+    @users
   end
   
   private

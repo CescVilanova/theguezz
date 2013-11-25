@@ -20,7 +20,7 @@
       <h5 class="subheader">
         <a href="#" data-reveal-id="GameRulesModal">Game Rules</a>
         |
-        <a href="#">Ranking</a>
+        <%= link_to "Ranking", users_index_path %>
       </h5>
     </div>
   </div>
@@ -32,7 +32,7 @@
   <div class ="small-6 small-centered columns padding_bottom_40">
     <%= form_for([@club, @user]) do |f| %>
       <%= f.label :name %>
-      <%= f.text_field :name, placeholder: "Write your name here" %>
+      <%= f.text_field :name, :autofocus => true, placeholder: "Write your name here" %>
       <%= f.label :email %>
       <%= f.email_field :email, placeholder: "Write your email here" %>
       <%= f.submit %>
