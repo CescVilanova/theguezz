@@ -13,10 +13,13 @@
  *= require_tree .
  */
 
+
+.row.full-width { width: 100%; max-width: 90%; }
+
 .centered {
   text-align:center;
 }
-  
+
 .centered_padding_bottom_20 {
   text-align:center;
   padding-bottom: 20px;
@@ -27,12 +30,20 @@
   padding-bottom: 40px;
 }
 
+.centered_padding_top_80 {
+  text-align:center;
+  padding-top: 80px;
+}
+
 .padding_bottom_40 {
   padding-bottom: 40px;
 }
 
 .body_custom { 
-  margin-top: 40px; 
+  margin-top: 60px; 
+  margin-left: 60px; 
+  margin-right: 60px;
+  margin-bottom: 60px;
 }
 
 .claim { 

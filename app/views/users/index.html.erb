@@ -8,41 +8,36 @@
 
 <hr>
 
-<ul class="subheader small-block-grid-13">
-  <li><a href="#">1st Leg 1/8th</a></li>
-  <li>|</li>
-  <li><a href="#">2nd Leg 1/8th</a></li>
-  <li>|</li>
-  <li><a href="#">1st Leg 1/4th</a></li>
-  <li>|</li>
-  <li><a href="#">2nd Leg 1/4th</a></li>
-  <li>|</li>
-  <li><a href="#">1st Leg 1/2th</a></li>
-  <li>|</li>
-  <li><a href="#">2nd Leg 1/2th</a></li>
-  <li>|</li>
-  <li><a href="#">Final</a></li>
+<ul class="subheader large-block-grid-7">
+  <% @actual_result.each do |match| %>
+    <li>
+      <a href="#"><%= match.name %></a> 
+    </li>
+  <% end %>
 </ul>
 
-<h4 class="subheader">Week 1 Ranking</h4>
+<h4 class="subheader">1st Leg 1/8th Ranking</h4>
 
-<table>
+<table class="large-block-grid-3">
   <thead>
-    <tr>
-      <th width="200">Player</th>
-      <th width="400"></th>
-      <th width="50">Score</th>
+    <tr class="row.full_width">
+      <th width="950">Player</th>
+      <th width="100">Score</th>
     </tr>
   </thead>
   <tbody>
-    <%@users.each do |n|%>
-      <tr>
+    <%@users.each do |user|%>
+      <tr class="row.full_width">
         <td>
-          <%= n.name %>
+          <%= user.name %>  
+          <p>
+            <%= link_to "New Prediction", new_user_prediction_path(user) %>
+            | <%= link_to "Actual Result", new_user_actual_result_path(user) %>
+            | <%= link_to "Edit User", edit_user_path(user) %>
+          </p>
         </td>
-        <td></td>
         <td>
-          <%= n.score %>
+          <%= user.score %>
         </td>
       </tr>
     <%end%>
@@ -53,21 +48,19 @@
 
 <h4 class="subheader">Overall Ranking</h4>
 
-<table>
+<table class="large-block-grid-3">
   <thead>
-    <tr>
-      <th width="200">Player</th>
-      <th width="400"></th>
-      <th width="50">Score</th>
+    <tr class="row.full_width">
+      <th width="950">Player</th>
+      <th width="100">Score</th>
     </tr>
   </thead>
   <tbody>
     <%@users.each do |n|%>
-      <tr>
+      <tr class="row.full_width">
         <td>
           <%= n.name %>
         </td>
-        <td></td>
         <td>
           <%= n.score %>
         </td>
@@ -76,8 +69,5 @@
   </tbody>
 </table>
 
-<!-- End of the placeholder talbe. -->
+<!-- End of the placeholder table. -->
 
-<div class="centered_padding_bottom_40">
-  <p>© The Guezz<p>
-</div>

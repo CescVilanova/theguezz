@@ -7,8 +7,8 @@ class UsersController < ApplicationController
   
   def create
     @club = Club.find params[:club_id]
-    @user = User.new user_params
-    @user.selected_club_id = @club
+    @user = @club.users.build(user_params)
+    @user.selected_club_id = params[:club_id]
     
     if @user.save
       redirect_to welcome_registered_path
@@ -19,13 +19,32 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all.order(score: :desc)
-    @users
+    @actual_result = Match.all
   end
+  
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    @user.update_attributes(user_params)
+    redirect_to users_index_path
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    if @user.destroy
+      redirect_to users_index_path
+    else
+      render :edit
+    end
+  end  
   
   private
   
   def user_params
-    params.require(:user).permit(:name, :email, :selected_club)
+    params.require(:user).permit(:name, :email, :selected_club_id)
   end
   
 end

@@ -1,0 +1,81 @@
+<h4 class="subheader">Guezz - Knockout Phase Champions League 2013-2014  (ADMIN MODE)</h4>
+
+<p class="subheader">
+  <a href="#" data-reveal-id="GameRulesModal">Game Rules</a>
+  |
+  <a href="#">Admin Login</a>
+</p>
+
+<hr>
+
+<%= link_to "Go Back to Ranking", users_index_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Predictions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= form_for [@user, @prediction] do |form| %>
+      <tr>
+        <td>
+          <%= form.label :match_id %>
+          <%= form.collection_select :match_id, Match.all, :id, :name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= form.label :final_score, "What will be the final score?" %>
+          <%= form.text_field :final_score %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= form.label :first_goal, "Who will score the first goal of the team?" %>
+          <%= form.text_field :first_goal %>
+        </td>  
+      </tr>
+      <tr>
+        <td>
+          <%= form.label :best_defender, "Who will be the best defender of the team?" %>
+          <%= form.text_field :best_defender %>
+        </td>  
+      </tr>
+      <tr>
+        <td>
+          <%= form.label :best_midfielder, "Who will be the best midfielder of the team?" %>
+          <%= form.text_field :best_midfielder %>
+        </td>  
+      </tr>
+      <tr>
+        <td>
+          <%= form.label :best_forward, "Who will be the best forward of the team?" %>
+          <%= form.text_field :best_forward %>  
+        </td>  
+      </tr>
+      <tr>
+        <td>
+          <%= form.label :time_of_first_goal, "When will your team score the first goal?" %>
+          <%= form.text_field :time_of_first_goal %>  
+        </td>   
+      </tr>
+      <tr>
+        <td>
+          <%= form.label :ball_possession, "Which % of ball possession will your team have?" %>
+          <%= form.text_field :ball_possession %>  
+        </td>  
+      </tr>
+      <tr>
+        <td> 
+          <%= form.label :yellow_cards, "How many yellow cards will be shown to both teams?" %>
+          <%= form.text_field :yellow_cards %>  
+        </td>  
+      </tr>
+  </tbody>
+</table>
+
+<div class="centered_padding_bottom_40">
+    <%= form.submit "Save Prediction" =%>
+    <% end %>
+</div>

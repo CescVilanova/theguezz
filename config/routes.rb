@@ -1,16 +1,25 @@
 Theguezz::Application.routes.draw do
 
+  resources :actual_results
+
   get "static_pages/about"
   get "static_pages/rules"
   get "static_pages/layout_predictions_public"
   get "static_pages/layout_predictions_admin"
   get "users/index"
   get "welcome/registered"
+  
   resources :clubs do
     resources :users
   end
   
-  resources :users
+  resources :users do
+    resources :predictions
+  end
+  
+  resources :users do
+    resources :actual_results 
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

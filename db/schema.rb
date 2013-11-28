@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131121170840) do
+ActiveRecord::Schema.define(version: 20131126161434) do
+
+  create_table "actual_results", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "match_id"
+    t.string   "final_score"
+    t.string   "first_goal"
+    t.string   "best_defender"
+    t.string   "best_midfielder"
+    t.string   "best_forward"
+    t.string   "time_of_first_goal"
+    t.string   "ball_possession"
+    t.string   "yellow_cards"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clubs", force: true do |t|
     t.string   "name"
@@ -24,6 +39,22 @@ ActiveRecord::Schema.define(version: 20131121170840) do
     t.integer  "user_id"
     t.integer  "club_id"
     t.integer  "match_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  create_table "predictions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "match_id"
+    t.string   "final_score"
+    t.string   "first_goal"
+    t.string   "best_defender"
+    t.string   "best_midfielder"
+    t.string   "best_forward"
+    t.string   "time_of_first_goal"
+    t.string   "ball_possession"
+    t.string   "yellow_cards"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

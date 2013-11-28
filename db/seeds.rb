@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-  
+
   clubs = Club.create!([
     { name: 'Olymipacos', crest: File.open('app/assets/images/crests/olympiacos.png') },
     { name: 'F.C. Barcelona', crest: File.open('app/assets/images/crests/barcelona.JPG') },
@@ -24,4 +24,13 @@
     { name: 'Celtic Glasgow', crest: File.open('app/assets/images/crests/celtic.jpeg') },
     { name: 'Porto', crest: File.open('app/assets/images/crests/porto.jpg') }
     ])
-
+  
+  matches = Match.create!([
+    { name: '1st Leg 1/8th'},
+    { name: '2nd Leg 1/8th'},
+    { name: '1st Leg 1/4th'},
+    { name: '2nd Leg 1/4th'},
+    { name: '1st Leg 1/2th'},
+    { name: '2nd Leg 1/2th'},
+    { name: 'Final'},
+  ])
