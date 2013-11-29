@@ -16,6 +16,7 @@ end
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'zurb-foundation'
+gem 'devise'
 
 # Installed by Rails ----------------------------------------------------
 

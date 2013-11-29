@@ -1,5 +1,7 @@
 Theguezz::Application.routes.draw do
   
+  devise_for :admins
+  
   resources :actual_results
 
   get "static_pages/about"

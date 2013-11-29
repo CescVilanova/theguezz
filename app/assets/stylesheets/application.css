@@ -16,6 +16,11 @@
 
 .row.full-width { width: 100%; max-width: 90%; }
 
+.user-info {
+  margin-top: 9px;
+  float: right;
+}
+
 .centered {
   text-align:center;
 }
