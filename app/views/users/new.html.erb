@@ -36,7 +36,9 @@
       <%= f.text_field :name, :autofocus => true, placeholder: "Write your name here" %>
       <%= f.label :email %>
       <%= f.email_field :email, placeholder: "Write your email here" %>
-      <%= f.submit value="Register Now!"%>
+    <div class="centered_padding_top_40">
+      <%= f.submit 'Register Now!', class:'large button buton success button radius'%>
+    </div>  
     <% end %>
   </div>
 </div>

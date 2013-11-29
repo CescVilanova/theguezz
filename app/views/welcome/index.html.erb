@@ -50,10 +50,10 @@
       <li>
         <div>
             <%= image_tag(n.crest, class:'crest')%>
-          <div class="centered_padding_top_40">
-            <div class="large button buton success button radius center">
-              <%= link_to "Start Playing With This Team", new_club_user_path(:club_id => n.id) %>
-            </div>
+          <div class="centered_padding_top_40">            
+            <%= link_to new_club_user_path(:club_id => n.id) do %>
+              <div class="large button buton success button radius center">Start Playing With This Team</div> 
+            <% end %>
         </div>
       </li>
     <%end%>
