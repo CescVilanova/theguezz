@@ -2,8 +2,6 @@
 
 <p class="subheader">
   <a href="#" data-reveal-id="GameRulesModal">Game Rules</a>
-  |
-  <a href="#">Admin Login</a>
 </p>
 
 <hr>
@@ -31,9 +29,11 @@
         <td>
           <%= user.name %>  
           <p>
-            <%= link_to "New Prediction", new_user_prediction_path(user) %>
-            | <%= link_to "New Actual Result", new_user_actual_result_path(user) %>
-            | <%= link_to "Edit User", edit_user_path(user) %>
+            <% if admin_signed_in? %>            
+              <%= link_to "New Prediction", new_user_prediction_path(user) %>
+              | <%= link_to "New Actual Result", new_user_actual_result_path(user) %>
+              | <%= link_to "Edit User", edit_user_path(user) %>
+            <% end %>
           </p>
         </td>
         <td>
