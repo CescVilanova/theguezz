@@ -17,7 +17,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'zurb-foundation'
 
-
 # Installed by Rails ----------------------------------------------------
 
 # Use SCSS for stylesheets
