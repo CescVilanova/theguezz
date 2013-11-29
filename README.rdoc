@@ -1,13 +1,23 @@
 == README
 
-The guezz is the name of a web based social game about sports predictions. 
+Guezz is a web based social game about sports predictions. 
 
-The unique ingredient of The Guezz is that, contrary to betting sites, you win when you beat your friends at doing accurate predictions.
+The unique ingredient of Guezz is that, contrary to betting sites, you win when you beat your 
+friends at doing accurate predictions.
 
 This app is a simple prototype to test a new set of rules of the game.
 
+The game will be played during the Knockout Phase of the UEFA Champion League 2013-2014.
+
 The app basically covers:
 
-1. Player registration.
-2. PLayer scores management (only available for the admin) and consultation (public).
+1. User registration. Users choose their team and set their name and email address.
+
+2. Player scores management. Only the admin will be available to manually:
+  - Enter how many points each user wins in each match.
+  - Update the user selected team.
+  - Delete any user. 
+  
+3. Scores consultation. Anyone can access the site to check how many points each users has scored, 
+both in each match and in the overall ranking.
 

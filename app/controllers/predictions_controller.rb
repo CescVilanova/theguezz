@@ -8,7 +8,6 @@ class PredictionsController < ApplicationController
   def create
     @user = User.find params[:user_id]
     @prediction = @user.predictions.build prediction_params 
-    @user.predictions.build prediction_params
       
     if @prediction.save
       redirect_to users_index_path

@@ -30,13 +30,21 @@
   padding-bottom: 40px;
 }
 
-.centered_padding_top_80 {
+.centered_padding_top_40 {
   text-align:center;
-  padding-top: 80px;
+  padding-top: 40px;
+}
+
+.padding_top_20 {
+  padding-top: 20px;
 }
 
 .padding_bottom_40 {
   padding-bottom: 40px;
+}
+
+.padding_bottom_80 {
+  padding-bottom: 80px;
 }
 
 .body_custom { 

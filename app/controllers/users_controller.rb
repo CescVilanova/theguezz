@@ -11,6 +11,8 @@ class UsersController < ApplicationController
     @user.selected_club_id = params[:club_id]
     
     if @user.save
+      UserMailer.welcome_email(@user).deliver
+      UserMailer.new_user(@user).deliver
       redirect_to welcome_registered_path
     else
       render :new

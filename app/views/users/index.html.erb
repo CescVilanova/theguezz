@@ -16,7 +16,7 @@
   <% end %>
 </ul>
 
-<h4 class="subheader">1st Leg 1/8th Ranking</h4>
+<h4 class="subheader padding_top_20">1st Leg 1/8th Ranking</h4>
 
 <table class="large-block-grid-3">
   <thead>
@@ -32,7 +32,7 @@
           <%= user.name %>  
           <p>
             <%= link_to "New Prediction", new_user_prediction_path(user) %>
-            | <%= link_to "Actual Result", new_user_actual_result_path(user) %>
+            | <%= link_to "New Actual Result", new_user_actual_result_path(user) %>
             | <%= link_to "Edit User", edit_user_path(user) %>
           </p>
         </td>
@@ -46,7 +46,7 @@
 
 <!-- Need to be updated. Now just a copy of the above table. -->
 
-<h4 class="subheader">Overall Ranking</h4>
+<h4 class="subheader padding_top_20">Overall Ranking</h4>
 
 <table class="large-block-grid-3">
   <thead>
