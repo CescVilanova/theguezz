@@ -44,11 +44,12 @@
     <ul data-orbit
         data-options=
           "animation_speed: 100";
+          "variable_height: true";
         >
     <%@clubs.each do |n|%>
       <li>
         <div>
-          <%= image_tag(n.crest)%>
+            <%= image_tag(n.crest, class:'crest')%>
           <div class="centered_padding_top_40">
             <div class="large button buton success button radius center">
               <%= link_to "Start Playing With This Team", new_club_user_path(:club_id => n.id) %>

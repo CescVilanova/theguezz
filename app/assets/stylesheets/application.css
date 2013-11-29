@@ -13,6 +13,19 @@
  *= require_tree .
  */
 
+.crest {
+ margin: 0 auto;
+ max-height: 100%;
+}
+
+.orbit-prev {
+  margin-top: -30%!important;
+}
+
+.orbit-next {
+  margin-top: -30%!important;
+}
+
 
 .row.full-width { width: 100%; max-width: 90%; }
 
