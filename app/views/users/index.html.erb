@@ -27,14 +27,13 @@
     <%@users.each do |user|%>
       <tr class="row.full_width">
         <td>
-          <%= user.name %>  
-          <p>
-            <% if admin_signed_in? %>            
-              <%= link_to "New Prediction", new_user_prediction_path(user) %>
-              | <%= link_to "New Actual Result", new_user_actual_result_path(user) %>
-              | <%= link_to "Edit User", edit_user_path(user) %>
-            <% end %>
-          </p>
+            <%= user.name %> <% if admin_signed_in? %> | <%= link_to "Edit User", edit_user_path(user) %> 
+            <p>
+              <% Match.all.each do |match| %>
+              <%= link_to "Predictions for #{match.name}", new_user_match_prediction_path(user, match) %>
+              <% end %>
+            </p>
+          <% end %>
         </td>
         <td>
           <%= user.score %>

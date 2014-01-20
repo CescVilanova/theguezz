@@ -10,72 +10,53 @@
 
 <%= link_to "Go Back to Ranking", users_index_path %>
 
-<table>
+<h4 class="subheader padding_top_20">Match Id Predictions by User Name</h4>
+
+<table class="large-block-grid-3 padding_bottom_80">
   <thead>
-    <tr>
-      <th>Predictions</th>
+    <tr class="row.full_width">
+      <th width="500">Question</th>
+      <th width="200">User Answer</th>
+      <th width="200">Actual Result</th>
+      <th width="150">Points Won</th>
     </tr>
   </thead>
   <tbody>
-    <%= form_for [@user, @prediction] do |form| %>
-      <tr>
-        <td>
-          <%= form.label :match_id %>
-          <%= form.collection_select :match_id, Match.all, :id, :name %>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <%= form.label :final_score, "What will be the final score?" %>
-          <%= form.text_field :final_score %>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <%= form.label :first_goal, "Who will score the first goal of the team?" %>
-          <%= form.text_field :first_goal %>
-        </td>  
-      </tr>
-      <tr>
-        <td>
-          <%= form.label :best_defender, "Who will be the best defender of the team?" %>
-          <%= form.text_field :best_defender %>
-        </td>  
-      </tr>
-      <tr>
-        <td>
-          <%= form.label :best_midfielder, "Who will be the best midfielder of the team?" %>
-          <%= form.text_field :best_midfielder %>
-        </td>  
-      </tr>
-      <tr>
-        <td>
-          <%= form.label :best_forward, "Who will be the best forward of the team?" %>
-          <%= form.text_field :best_forward %>  
-        </td>  
-      </tr>
-      <tr>
-        <td>
-          <%= form.label :time_of_first_goal, "When will your team score the first goal?" %>
-          <%= form.text_field :time_of_first_goal %>  
-        </td>   
-      </tr>
-      <tr>
-        <td>
-          <%= form.label :ball_possession, "Which % of ball possession will your team have?" %>
-          <%= form.text_field :ball_possession %>  
-        </td>  
-      </tr>
-      <tr>
-        <td> 
-          <%= form.label :yellow_cards, "How many yellow cards will be shown to both teams?" %>
-          <%= form.text_field :yellow_cards %>  
-        </td>  
-      </tr>
-  </tbody>
+    <%= form_for [@user, @match, @prediction, @answer] do |form| %>
+    <tr class="row.full_width">
+      <td><%= form.text_field :user_answer %></td>
+      <td><%= form.text_field :actual_result %></td>
+      <td><%= form.text_field :question_points %></td>
+    </tr>
+  
+  </tbody>  
 </table>
-
+    
 <div class="centered_padding_bottom_40">
-    <%= form.submit "Save Prediction" =%>
+    <%= form.submit value="Update Data"%>
     <% end %>
 </div>
+
+<table class="large-block-grid-3 user-info padding_top_40">
+  <thead>
+    <tr class>
+      <th width="150">
+        <h4>
+          Match Score
+        </h4>  
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="row.full_width">
+      <td>
+        <h4>
+        2000 
+        </h4>  
+      </td>
+    </tr>
+  </tbody>  
+</table>
+
+
+

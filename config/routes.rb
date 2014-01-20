@@ -2,8 +2,6 @@ Theguezz::Application.routes.draw do
   
   devise_for :admins
   
-  resources :actual_results
-
   get "static_pages/about"
   get "static_pages/rules"
   get "static_pages/layout_predictions_public"
@@ -16,11 +14,19 @@ Theguezz::Application.routes.draw do
   end
   
   resources :users do
-    resources :predictions
+    resources :matches do
+      resources :predictions do
+        resources :answers
+      end
+    end
   end
   
-  resources :users do
-    resources :actual_results 
+  resources :matches do
+    resources :users 
+  end
+  
+  resources :questions do
+    resources :answers
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

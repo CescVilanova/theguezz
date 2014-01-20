@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115130641) do
+ActiveRecord::Schema.define(version: 20140116163052) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(version: 20140115130641) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+
+  create_table "answers", force: true do |t|
+    t.integer  "question_id"
+    t.integer  "prediction_id"
+    t.string   "user_answer"
+    t.string   "actual_result"
+    t.string   "question_points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["prediction_id"], name: "index_answers_on_prediction_id"
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id"
 
   create_table "clubs", force: true do |t|
     t.string   "name"
@@ -56,6 +69,12 @@ ActiveRecord::Schema.define(version: 20140115130641) do
     t.string   "user_prediction"
     t.string   "real_result"
     t.integer  "prediction_points"
+  end
+
+  create_table "questions", force: true do |t|
+    t.string   "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
